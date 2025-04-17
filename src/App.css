@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #312338;
+  --secondary-color: #943d78;
+  --accent-color: #26b1e4;
+  --light-color: #fbfafb;
+  --dark-color: #1a1a1a;
+  --gray-color: #9ea1aa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', 'Roboto', sans-serif;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.tabs-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.tabs button {
+  padding: 0.8rem 1.5rem;
+  background-color: var(--light-color);
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--gray-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  color: var(--primary-color);
+}
+
+.tabs button.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

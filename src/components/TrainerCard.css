@@ -1,0 +1,213 @@
+.trainer-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trainer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-image {
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f8f8;
+}
+
+.trainer-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Special styling for logo images */
+.trainer-image img[src*="codechef"],
+.trainer-image img[src*="be-practical"] {
+  object-fit: contain;
+  max-width: 85%;
+  max-height: 85%;
+  padding: 25px;
+  background-color: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transform: scale(1.1);
+}
+
+/* Special styling for CodeChef logo specifically */
+.trainer-image img[src*="codechef"] {
+  background: linear-gradient(to bottom, #f8f8f8, white);
+}
+
+/* Special styling for Be Practical logo specifically */
+.trainer-image img[src*="be-practical"] {
+  background: linear-gradient(to bottom, #f5f9ff, white);
+}
+
+.trainer-card:hover .trainer-image img {
+  transform: scale(1.05);
+}
+
+/* Adjust hover effect for logo images */
+.trainer-card:hover .trainer-image img[src*="codechef"],
+.trainer-card:hover .trainer-image img[src*="be-practical"] {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trainer-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.trainer-info h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+.trainer-role {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin: 0.4rem 0 1rem;
+}
+
+.trainer-contact {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.trainer-contact p {
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.trainer-contact i {
+  margin-right: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.trainer-details {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.trainer-details p {
+  margin-bottom: 0.3rem;
+}
+
+.trainer-certifications {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.trainer-certifications ul {
+  margin-top: 0.3rem;
+  padding-left: 1.5rem;
+}
+
+.trainer-bio {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  position: relative;
+  max-height: 80px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.trainer-bio::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), white);
+}
+
+.trainer-bio.expanded {
+  max-height: 500px;
+}
+
+.trainer-bio.expanded::after {
+  display: none;
+}
+
+.read-more-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .trainer-card {
+    flex-direction: row;
+  }
+
+  .trainer-image {
+    width: 35%;
+    height: auto;
+  }
+
+  .trainer-info {
+    width: 65%;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainer-image {
+    height: 180px;
+  }
+
+  .trainer-info {
+    padding: 1.2rem;
+  }
+
+  .trainer-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .trainer-role {
+    font-size: 0.9rem;
+    margin: 0.3rem 0 0.8rem;
+  }
+
+  .trainer-contact,
+  .trainer-details,
+  .trainer-certifications,
+  .trainer-bio {
+    font-size: 0.85rem;
+  }
+
+  /* Adapt certification list to take less space */
+  .trainer-certifications ul {
+    padding-left: 1.2rem;
+  }
+
+  /* Make contact info wrap better on tiny screens */
+  .trainer-contact p {
+    flex-wrap: wrap;
+  }
+}
