@@ -110,12 +110,14 @@ const TechnicalTrainers = () => {
         <h3>Our Training Partners</h3>
         <div className="partners-container">
           <div className="partner-card">
-            <img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg" alt="CodeChef" />
+            <a href="https://www.codechef.com/">
+            <img src="https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.svg" alt="CodeChef" /></a>
             <h4>CodeChef</h4>
             <p>Competitive Programming & DSA Training</p>
           </div>
           <div className="partner-card">
-            <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="Be Practical" />
+            <a href="https://be-practical.com/">
+  <img src="https://bepractical.s3.us-east-2.amazonaws.com/brand-logo.cc6e3cf088a8fd3005b1.jpg" alt="Be Practical" /></a>
             <h4>Be Practical</h4>
             <p>Full Stack & Industry 4.0 Training</p>
           </div>
