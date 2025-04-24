@@ -18,7 +18,7 @@ function App() {
             className={activeTab === 'technical' ? 'active' : ''}
             onClick={() => setActiveTab('technical')}
           >
-            Technical Trainers
+            Technical Trainer
           </button>
           <button
             className={activeTab === 'soft' ? 'active' : ''}
